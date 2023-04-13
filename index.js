@@ -1,18 +1,26 @@
-let myName = "ZhangSan"; // String Literal
-let age = 33; // Number Literal
-let isApproved = true; // Boolean Literal, can be true or false
-let yourName = undefined;
-let selectedColor = null;
+let person = {
+  name: "ZhangSan",
+  age: 33,
+};
+console.log(person);
 
-console.log(typeof myName);
-myName = 1;
-console.log(typeof myName);
+// Dot Notation
+console.log(person.name);
+// Bracket Notation
+console.log(person["name"]);
 
-// In Javascript just have number
-console.log(typeof age);
-age = 30.2;
-console.log(typeof age);
+person.age = 22;
+console.log(person);
 
-console.log(typeof isApproved);
-console.log(typeof yourName); // type: undefined, value: undefined
-console.log(typeof selectedColor); // type: object, value: null
+person["age"] = 33;
+console.log(person);
+
+// Bracket Notation for Unknown Attribute
+let person2 = {
+  name: "LiSi",
+  age: 12,
+};
+let selection = "name";
+console.log(person2[selection]);
+selection = "age";
+console.log(person2[selection]);
