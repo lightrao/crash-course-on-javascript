@@ -1,26 +1,16 @@
-let person = {
-  name: "ZhangSan",
-  age: 33,
-};
-console.log(person);
+// a list of items
+let colors = ["red", "orange", "yellow"];
+console.log(colors);
+console.log(colors[0]);
 
-// Dot Notation
-console.log(person.name);
-// Bracket Notation
-console.log(person["name"]);
+// the length is dynamic
+colors[3] = "green";
+console.log(colors);
 
-person.age = 22;
-console.log(person);
+// type of items is dynamic
+let myArray = ["hello", 1, false, undefined, null];
+console.log(myArray);
 
-person["age"] = 33;
-console.log(person);
-
-// Bracket Notation for Unknown Attribute
-let person2 = {
-  name: "LiSi",
-  age: 12,
-};
-let selection = "name";
-console.log(person2[selection]);
-selection = "age";
-console.log(person2[selection]);
+// array is object
+console.log(typeof myArray);
+console.log(myArray.length);
