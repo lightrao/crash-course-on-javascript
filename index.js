@@ -1,16 +1,11 @@
-// a list of items
-let colors = ["red", "orange", "yellow"];
-console.log(colors);
-console.log(colors[0]);
+function greet(name) {
+  console.log("Hello " + name);
+}
+greet("ZhangSan");
+greet("LiSi");
 
-// the length is dynamic
-colors[3] = "green";
-console.log(colors);
-
-// type of items is dynamic
-let myArray = ["hello", 1, false, undefined, null];
-console.log(myArray);
-
-// array is object
-console.log(typeof myArray);
-console.log(myArray.length);
+function addTwoNumbers(a, b) {
+  return a + b;
+}
+let result = addTwoNumbers(3, 5);
+console.log(result);
