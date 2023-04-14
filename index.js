@@ -1,21 +1,17 @@
 let x = 10;
-let y = 3;
 
-console.log(x + y);
-console.log(x - y);
-console.log(x * y);
-console.log(x / y);
-console.log(x % y);
-console.log(x ** y);
+// x++;
+// x = x + 1;
+// console.log(x);
 
-// Increment
-console.log(++x);
+// x = x + 5;
+// console.log(x);
 
-console.log(x++);
-console.log(x);
+// Compound Assignment Operator
+// x += 5;
+// console.log(x);
 
-// Decrement
-console.log(--y);
-
-console.log(y--);
-console.log(y);
+// x = x * 3;
+// console.log(x);
+// x *= 3;
+// console.log(x);
