@@ -1,11 +1,9 @@
-let x = 10;
+// strict equality operator (operands have same Type & Value)
+console.log(1 === 1);
+console.log('1' === 1);
 
-// relational operators
-console.log(x > 0);
-console.log(x >= 10);
-console.log(x < 10);
-console.log(x <= 10);
-
-// equality operators
-console.log(x === 10);
-console.log(x !== 10);
+// lose equality operator (Check just Value)
+// first convert the type on the right to match what on the left side
+console.log(1 == 1);
+console.log('1' == 1);
+console.log(true == 1);
