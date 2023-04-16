@@ -1,17 +1,11 @@
 let x = 10;
 
-// x++;
-// x = x + 1;
-// console.log(x);
+// relational operators
+console.log(x > 0);
+console.log(x >= 10);
+console.log(x < 10);
+console.log(x <= 10);
 
-// x = x + 5;
-// console.log(x);
-
-// Compound Assignment Operator
-// x += 5;
-// console.log(x);
-
-// x = x * 3;
-// console.log(x);
-// x *= 3;
-// console.log(x);
+// equality operators
+console.log(x === 10);
+console.log(x !== 10);
