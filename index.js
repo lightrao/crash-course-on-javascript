@@ -1,13 +1,22 @@
-let bringWallet = true;
-let takeShower = true;
-let goDate = bringWallet && takeShower;
-console.log(goDate);
+// result of a logical expression is not necessarily a true or false
+console.log(false || true);
+console.log(false || "hello");
+console.log(false || 1);
 
-let highIncome = false;
-let goodCredit = false;
-let eligibleForLoan = highIncome || goodCredit;
-console.log(eligibleForLoan);
+console.log(true && false);
+console.log(33 && null);
+console.log("hello" && 0);
 
-let lucky = true;
-let unlucky = !lucky;
-console.log(unlucky);
+// short-circuiting
+console.log(false || 1 || 2);
+console.log(true && 0 && "hello");
+
+// using the logical operator between nonbooleans
+let userColor = null;
+let defaultColor = "white";
+let currentColor = userColor || defaultColor;
+console.log(currentColor);
+
+let coins = 3;
+(coins >= 6) && console.log("You win!");
+(coins < 6) && console.log("You lose!");
