@@ -1,22 +1,32 @@
-// result of a logical expression is not necessarily a true or false
-console.log(false || true);
-console.log(false || "hello");
-console.log(false || 1);
+// 1 = 00000001
+// 2 = 00000010
+// | = 00000011
+console.log(1 | 2);
 
-console.log(true && false);
-console.log(33 && null);
-console.log("hello" && 0);
+// 1 = 00000001
+// 2 = 00000010
+// & = 00000000
+console.log(1 & 2);
 
-// short-circuiting
-console.log(false || 1 || 2);
-console.log(true && 0 && "hello");
+// 1 = 00000001
+// 2 = 00000010
+// ^ = 00000011
+console.log(1 ^ 2);
 
-// using the logical operator between nonbooleans
-let userColor = null;
-let defaultColor = "white";
-let currentColor = userColor || defaultColor;
-console.log(currentColor);
+// read, write, execute
+// 00000100
+// 00000010
+// 00000001
+const readPermission = 4;
+const writePermission = 2;
+const executePermission = 1;
 
-let coins = 3;
-(coins >= 6) && console.log("You win!");
-(coins < 6) && console.log("You lose!");
+let myPermission = 0;
+
+// add permission
+myPermission = myPermission | readPermission | writePermission;
+console.log(myPermission);
+
+// check permission
+let message = (myPermission & executePermission) ? "yes" : "no";
+console.log(message);
