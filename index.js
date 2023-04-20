@@ -2,7 +2,7 @@
 console.log(1 === 1);
 console.log('1' === 1);
 
-// lose equality operator (Check just Value)
+// loose equality operator (Check just Value)
 // first convert the type on the right to match what on the left side
 console.log(1 == 1);
 console.log('1' == 1);
