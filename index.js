@@ -2,10 +2,12 @@
 console.log(false || true);
 console.log(false || "hello");
 console.log(false || 1);
+console.log(false || 0);
 
 console.log(true && false);
 console.log(33 && null);
 console.log("hello" && 0);
+console.log(11 && "hello");
 
 // short-circuiting
 console.log(false || 1 || 2);
