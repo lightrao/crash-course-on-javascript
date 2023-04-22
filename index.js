@@ -1,12 +1,12 @@
-let day = 0;
+for (let i = 1; i <= 5; i++) {
+    // console.log("Hello world!", i);
+    if (i % 2 !== 0) {
+        console.log(i);
+    }
+}
 
-switch (day) {
-    case 6:
-        console.log("Today is Saturday");
-        break;
-    case 0:
-        console.log("Today is Sunday");
-        break;
-    default:
-        console.log("Looking forward to the Weekend");
+for (let i = 5; i >= 1; i--) {
+    if (i % 2 !== 0) {
+        console.log(i);
+    }
 }
