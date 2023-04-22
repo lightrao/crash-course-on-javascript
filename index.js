@@ -1,9 +1,12 @@
-let time = 19;
+let day = 0;
 
-if (time >= 6 && time < 12) {
-    console.log("Good morning");
-} else if (time >= 12 && time < 18) {
-    console.log("Good afternoon");
-} else {
-    console.log("Good evening");
+switch (day) {
+    case 6:
+        console.log("Today is Saturday");
+        break;
+    case 0:
+        console.log("Today is Sunday");
+        break;
+    default:
+        console.log("Looking forward to the Weekend");
 }
