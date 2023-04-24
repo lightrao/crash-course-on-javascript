@@ -1,13 +1,6 @@
-let i = 1;
-
-while (i <= 10) {
-    // if (i === 5) break;
-    if (i === 5) {
-        i++;
-        console.log('*');
-        continue;
-    }
-
-    console.log(i);
-    i++;
+function max(a, b) {
+    return a > b ? a : b;
 }
+console.log(max(1, 2));
+console.log(max(5, 4));
+console.log(max(8, 8));
