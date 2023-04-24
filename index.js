@@ -1,5 +1,13 @@
-const colors = ['red', 'green', 'blue'];
+let i = 1;
 
-for (const color of colors) {
-    console.log(color);
+while (i <= 10) {
+    // if (i === 5) break;
+    if (i === 5) {
+        i++;
+        console.log('*');
+        continue;
+    }
+
+    console.log(i);
+    i++;
 }
