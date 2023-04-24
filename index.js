@@ -1,19 +1,23 @@
-// Divisible by 3 => Fizz
-// Divisible by 5 => Buzz
-// Divisible by both 5 and 3 => FizzBuzz
-// Not divisible by 3 or 5 => same as input
-// Not a number => "Not a number"
+// Speed Limit = 70km/h
+// every 5km/h above deduct 1 point
+// deduct 12 points lead to license suspended 
 
-function fizzBuzz(input) {
-    if (typeof input !== "number") return "Not a number";
-    if (input % 3 === 0 && input % 5 === 0) return "FizzBuzz";
-    if (input % 3 === 0) return "Fizz";
-    if (input % 5 === 0) return "Buzz";
-    return input;
+function checkSpeed(speed) {
+    const speedLimit = 70;
+    const kmPerPoint = 5;
+
+    if (speed < speedLimit + kmPerPoint * 1) {
+        console.log("Ok.");
+    } else {
+        const points = Math.floor((speed - speedLimit) / 5);
+        if (points > 12) {
+            console.log("License suspended!");
+        } else {
+            console.log("Points deducted:", points);
+        }
+    }
 }
 
-for (let i = 1; i <= 15; i++) {
-    console.log(i, fizzBuzz(i));
+for (let speed = 65; speed <= 140; speed += 5) {
+    checkSpeed(speed);
 }
-
-console.log(fizzBuzz("hi"));
