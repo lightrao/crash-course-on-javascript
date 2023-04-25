@@ -1,14 +1,11 @@
-function showProperties(obj) {
-    for (key in obj)
-        if (typeof obj[key] === 'string')
-            console.log(key, obj[key]);
+function specialSum(input) {
+    let result = 0;
+    for (let i = 1; i <= input; i++) {
+        if (i % 3 === 0 || i % 5 === 0) {
+            result += i;
+        }
+    }
+    return result;
 }
 
-const movie = {
-    title: "Man in black",
-    releaseYear: 1997,
-    rating: 4.5,
-    director: 'Barry'
-};
-
-showProperties(movie);
+console.log(specialSum(10));
