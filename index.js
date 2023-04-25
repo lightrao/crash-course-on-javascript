@@ -1,11 +1,27 @@
-function specialSum(input) {
-    let result = 0;
-    for (let i = 1; i <= input; i++) {
-        if (i % 3 === 0 || i % 5 === 0) {
-            result += i;
-        }
+// Average score:
+// 1-59: F
+// 60-69: D
+// 70-79: C
+// 80-89: B
+// 90-100: A
+
+function calculateAverage(array) {
+    let sum = 0;
+    for (let value of array) {
+        sum += value;
     }
-    return result;
+    return sum / array.length;
 }
 
-console.log(specialSum(10));
+function calculateGrade(marks) {
+    const average = calculateAverage(marks);
+    if (average < 60) return "F";
+    if (average < 70) return "D";
+    if (average < 80) return "C";
+    if (average < 90) return "B";
+    return "A";
+}
+
+const marks = [60, 75, 88];
+
+console.log(calculateGrade(marks));
