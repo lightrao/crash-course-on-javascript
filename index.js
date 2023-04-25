@@ -1,12 +1,14 @@
-// Falsy: undefined, null, '', false, 0, NaN
-
-function countTruthy(array) {
-    let counter = 0;
-    for (element of array) {
-        if (element) counter++;
-    }
-    return counter;
+function showProperties(obj) {
+    for (key in obj)
+        if (typeof obj[key] === 'string')
+            console.log(key, obj[key]);
 }
 
-const myArray = [1, 2, 3, undefined, '', false, 8, true];
-console.log(countTruthy(myArray));
+const movie = {
+    title: "Man in black",
+    releaseYear: 1997,
+    rating: 4.5,
+    director: 'Barry'
+};
+
+showProperties(movie);
