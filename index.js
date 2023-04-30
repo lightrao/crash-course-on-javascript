@@ -20,9 +20,9 @@ console.log(anotherCircle.constructor);
 
 const person = {};
 // const person = new Object();
-const s = '';
-// const s = new String();
+const s = 'hello';
+// const s = new String('hello');
 const b = true;
-// const b = new Boolean();
+// const b = new Boolean(true);
 const n = 3
-// const n = new Number();
+// const n = new Number(3);
