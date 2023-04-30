@@ -1,15 +1,28 @@
-const circle = {
-    radius: 1
-};
+// Factory Function
+function createCircle(radius) {
+    return {
+        radius,
+        draw: function () {
+            console.log("draw circle");
+        }
+    };
+}
+const circle = createCircle(2);
+console.log(circle.constructor);
 
-circle.color = "yellow";
-circle.draw = function () {
-    console.log("draw circle");
-};
+// Constructor Function
+function Circle(radius) {
+    this.radius = radius;
+    this.draw = function () { console.log("draw circle"); };
+}
+const anotherCircle = new Circle(2);
+console.log(anotherCircle.constructor);
 
-delete circle.color;
-delete circle.draw;
-
-console.log(circle);
-
-// circle = { radius: 3 };
+const person = {};
+// const person = new Object();
+const s = '';
+// const s = new String();
+const b = true;
+// const b = new Boolean();
+const n = 3
+// const n = new Number();
