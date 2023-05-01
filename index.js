@@ -1,30 +1,36 @@
-function Circle(radius) {
-    this.radius = radius;
-    this.draw = function () {
-        console.log("draw circle");
-    };
+// let x = 10;
+// let y = x;
+
+// x = 20;
+// console.log(x, y)
+
+
+// let x = { value: 10 };
+// let y = x;
+
+// x.value = 20;
+// console.log(x, y)
+
+
+// let number = 10;
+
+// function increase(param) {
+//     param++;
+// }
+
+// increase(number);
+// console.log(number);
+
+let obj = { value: 10 };
+
+function increase(param) {
+    param.value++;
 }
 
-const circle = new Circle(2);
-console.log(circle);
+increase(obj);
+console.log(obj);
 
-console.log(Circle.name);
-console.log(Circle.length); // number of arguments
-console.log(Circle.constructor);
 
-// const Circle1 = new Function('radius', `
-// this.radius = radius;
-// this.draw = function () {
-//     console.log("draw circle");
-//  };
-// `);
-// const circle1 = new Circle1(2);
-// console.log(circle1);
-
-const anotherCircle = {};
-// Circle.call(anotherCircle, 2);
-Circle.apply(anotherCircle, [2]);
-console.log(anotherCircle);
 
 
 
