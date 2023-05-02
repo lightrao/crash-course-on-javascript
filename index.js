@@ -4,26 +4,24 @@ const circle = {
         console.log("draw circle");
     }
 };
+console.log(circle);
 
-// for (key in circle) {
-//     console.log(key, circle[key]);
+
+// const anotherCircle = {};
+// for (let key in circle) {
+//     anotherCircle[key] = circle[key];
 // }
+// console.log(anotherCircle)
 
+// anotherCircle['radius'] = circle['radius'];
+// anotherCircle['draw'] = circle['draw'];
+// console.log(anotherCircle)
 
-// console.log(Object.keys(circle));
+// const anotherCircle = Object.assign({}, circle);
+// console.log(anotherCircle)
 
-// for (key of Object.keys(circle)) {
-//     console.log(key);
-// }
-
-// // let x = { value: 1 };
-// let x = new Object();
-// x.value = 1;
-
-
-console.log('radius' in circle);
-console.log('draw' in circle);
-console.log('area' in circle)
+const anotherCircle = { ...circle };
+console.log(anotherCircle)
 
 
 
