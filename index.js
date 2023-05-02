@@ -20,10 +20,6 @@ const circle = {
 // let x = new Object();
 // x.value = 1;
 
-// console.log(Object.entries(circle));
-// for (let entry of Object.entries(circle)) {
-//     console.log(entry[0]);
-// }
 
 console.log('radius' in circle);
 console.log('draw' in circle);
