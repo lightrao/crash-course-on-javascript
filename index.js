@@ -3,16 +3,31 @@
 // zipCode
 // showAddress(address)
 
-const address = {
-    street: "BaiYun Road",
-    city: "KunMing",
-    zipCode: 650024,
-};
+// Object literal
+// const address = {
+//     street: "BaiYun Road",
+//     city: "KunMing",
+//     zipCode: 650024,
+// };
 
-function showAddress(address) {
-    for (let key in address) {
-        console.log(`${key} is ${address[key]}.`);
-    }
+// Factory
+// function createAddress(street, city, zipCode) {
+//     return {
+//         street,
+//         city,
+//         zipCode,
+//     };
+// }
+
+// const address = createAddress("BaiYun Road", "KunMing", 650224);
+// console.log(address);
+
+// Consturctor
+function Address(street, city, zipCode) {
+    this.street = street;
+    this.city = city;
+    this.zipCode = zipCode;
 }
 
-showAddress(address);
+const address = new Address("BaiYun Road", "KunMing", 650224);
+console.log(address);
