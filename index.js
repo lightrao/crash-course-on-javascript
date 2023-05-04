@@ -1,41 +1,20 @@
-// Consturctor
-function Address(street, city, zipCode) {
-    this.street = street;
-    this.city = city;
-    this.zipCode = zipCode;
-}
+// title
+// body
+// author
+// views
+// comments:(author, body)
+// isLive
 
-const address1 = new Address("BaiYun Road", "KunMing", 650224);
-const address2 = new Address("LongQuan Road", "KunMing", 650224);
-const address3 = address1;
+let post = {
+    title: "How to learn javascript",
+    body: "1. Take a course. 2. learn from books. ...",
+    author: "ZhangSan",
+    views: 101,
+    comments: [
+        { author: "LiSi", body: "A good post." },
+        { author: "WangWu", body: "Very useful." }
+    ],
+    isLive: true
+};
 
-function areEqual(obj1, obj2) {
-    const keys1 = Object.keys(obj1);
-    const keys2 = Object.keys(obj2);
-
-    if (keys1.length !== keys2.length) {
-        return false;
-    }
-
-    for (let i = 0; i < keys1.length; i++) {
-        if (keys1[i] !== keys2[i]) {
-            return false;
-        }
-    }
-
-    for (let key of keys1) {
-        if (obj1[key] !== obj2[key]) {
-            return false;
-        }
-    }
-
-    return true;
-}
-
-function areSame(obj1, obj2) {
-    return obj1 === obj2;
-}
-
-console.log(areEqual(address1, address2));
-console.log(areSame(address1, address2));
-console.log(areSame(address1, address3));
+console.log(post);
