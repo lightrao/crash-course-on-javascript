@@ -1,14 +1,15 @@
-const numbers = [3, 4];
-// numbers = [];
+const numbers = [1, 2, 3, 4];
+console.log(numbers.indexOf(2));
+console.log(numbers.indexOf(7));
+console.log(numbers.indexOf('2'));
 
-// End
-numbers.push(5, 6);
-console.log(numbers);
+const numbers2 = [1, 2, 3, 1, 1, 4];
+console.log(numbers2.indexOf(1));
+console.log(numbers2.lastIndexOf(1));
 
-// Beginning
-numbers.unshift(1, 2);
-console.log(numbers);
+// numbers2.indexOf(1) !== -1
+if (numbers2.includes(1)) {
+    console.log("numbers2 include 1.");
+}
 
-// Middle
-numbers.splice(3, 0, 3.3, 3.4);
-console.log(numbers);
+console.log(numbers2.indexOf(1, 1));
