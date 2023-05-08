@@ -1,16 +1,19 @@
-const numbers = [1, 2, 3, 4];
+let numbers=[1,2,3,4];
+let another=numbers;
 
-// End
-// const last = numbers.pop();
-// console.log(last);
-// console.log(numbers);
+// Solution 1
+// numbers=[];
 
-// Beginning
-// const first = numbers.shift();
-// console.log(first);
-// console.log(numbers);
+// Solution 2
+// numbers.length=0;
 
-// Middle
-const numbersBeDeleted = numbers.splice(1, 2, 'a', 'b');
+// Solution 3
+// numbers.splice(0,numbers.length);
+
+// Solution 4
+while(numbers.length>0){
+    console.log(numbers.pop());
+}
+
 console.log(numbers);
-console.log(numbersBeDeleted);
+console.log(another);
