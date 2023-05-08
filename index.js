@@ -1,19 +1,19 @@
-let numbers=[1,2,3,4];
-let another=numbers;
+// const first = [1, 2, 3];
+// const second = [4, 5, 6];
+// const combined = first.concat(second);
+// console.log(combined);
 
-// Solution 1
-// numbers=[];
+// const slice = combined.slice(2, 4);
+// console.log(slice);
 
-// Solution 2
-// numbers.length=0;
+const first = [{ id: 1 }, { id: 2 }];
+const second = [4, 5, 6];
+const combined = first.concat(second);
+console.log(combined);
+// first[1]['id'] = 20;
+// console.log(combined);
 
-// Solution 3
-// numbers.splice(0,numbers.length);
-
-// Solution 4
-while(numbers.length>0){
-    console.log(numbers.pop());
-}
-
-console.log(numbers);
-console.log(another);
+const slice = combined.slice(1, 3);
+console.log(slice);
+first[1].id = 20;
+console.log(slice);
