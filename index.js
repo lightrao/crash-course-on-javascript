@@ -1,13 +1,10 @@
-const myArray = ['a', 'b', 'c', 'd'];
+const numbers = [1, 2, 3, 4];
+const joined = numbers.join('$');
+console.log(joined);
 
-// for (let e of myArray) {
-//     console.log(e);
-// }
+const message = "Nice to meet you, my friend.";
+const parts = message.split(' ');
+console.log(parts);
 
-// for (let index in myArray) {
-//     console.log(index, myArray[index]);
-// }
-
-myArray.forEach(function (e, index) {
-    console.log(index, e);
-});
+const message2 = parts.join('-');
+console.log(message2); // url slug
