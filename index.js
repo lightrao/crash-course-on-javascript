@@ -1,10 +1,17 @@
 const numbers = [1, 2, 3, 4];
 
-const doubledNumbers = numbers.map(number => number * 2);
-console.log(doubledNumbers);
+// let sum = 0;
+// for (number of numbers) {
+//     sum += number;
+// }
+// console.log(sum);
 
-const sqrt = numbers.map(number => Math.sqrt(number));
-console.log(sqrt);
+// a for accumulator, c for currentValue
+// a = 0, c = 1 => a = 1
+// a = 1, c = 2 => a = 3
+// a = 3, c = 3 => a = 6
+// a = 6, c = 4 => a = 10
+const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+console.log(sum);
 
-const objects = numbers.map(number => ({ value: number }));
-console.log(objects);
+
