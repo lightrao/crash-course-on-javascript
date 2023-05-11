@@ -1,3 +1,12 @@
+// Object literal
+const firstCircle = {
+    radius: 2,
+    draw: function () {
+        console.log("draw circle");
+    }
+};
+console.log(firstCircle.constructor);
+
 // Factory Function
 function createCircle(radius) {
     return {
