@@ -1,12 +1,11 @@
-function arrayFromRang(min, max) {
-    const result = [];
-    for (let i = min; i <= max; i++) {
-        result.push(i);
+const numbers = [1, 2, 3, 4];
+
+function includes(array, searchElement) {
+    for (e of array) {
+        if (e === searchElement) return true;
     }
-    return result;
+    return false;
 }
 
-const numbers = arrayFromRang(-10, -1);
-console.log(numbers);
-
+console.log(includes(numbers, 44))
 
