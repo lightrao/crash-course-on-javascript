@@ -11,6 +11,8 @@ console.log(circle);
 console.log(Circle.name);
 console.log(Circle.length); // number of arguments
 console.log(Circle.constructor);
+console.log(Circle.call);
+console.log(Circle.apply);
 
 // const Circle1 = new Function('radius', `
 // this.radius = radius;
