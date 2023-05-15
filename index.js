@@ -1,17 +1,19 @@
-const numbers = [1, 2, 3, 4, 1, 2, 3, 4];
+const numbers = [1, 2, 3, 4, 5, 6, 7];
 
-function except(array, excluded) {
-    // for (let e of excluded) {
-    //     array = array.filter(n => n !== e);
-    // }
-    // return array;
-
-    const output = [];
-    for (let e of array) {
-        if (!excluded.includes(e)) output.push(e);
+function move(array, index, offset) {
+    const position = index + offset;
+    if (position >= array.length || position < 0) {
+        console.error("Invalid offset!");
+        return;
     }
+
+    const output = [...array];
+    const elementWillMove = output.splice(index, 1)[0];
+    output.splice(position, 0, elementWillMove);
     return output;
 }
 
-console.log(except(numbers, [2, 3]))
-
+const output = move(numbers, 2, 1);
+console.log(output);
+// [1, 2, 3, 4, 5, 6, 7]
+// [1, 2, 4, 3, 5, 6, 7]
