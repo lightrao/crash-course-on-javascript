@@ -1,19 +1,19 @@
-const numbers = [1, 2, 3, 4, 5, 6, 7];
+const numbers = [1, 2, 3, 4, 1, 1];
 
-function move(array, index, offset) {
-    const position = index + offset;
-    if (position >= array.length || position < 0) {
-        console.error("Invalid offset!");
-        return;
-    }
+function countOccurrences(array, searchElement) {
+    // let counter = 0;
+    // for (let element of array) {
+    //     if (element === searchElement) {
+    //         counter++;
+    //     }
+    // }
+    // return counter;
 
-    const output = [...array];
-    const elementWillMove = output.splice(index, 1)[0];
-    output.splice(position, 0, elementWillMove);
-    return output;
+    return array.reduce((accumulator, current) => {
+        const occurence = (current === searchElement) ? 1 : 0;
+        return accumulator + occurence;
+    }, 0);
 }
 
-const output = move(numbers, 2, 1);
-console.log(output);
-// [1, 2, 3, 4, 5, 6, 7]
-// [1, 2, 4, 3, 5, 6, 7]
+const count = countOccurrences(numbers, 1);
+console.log(count);
