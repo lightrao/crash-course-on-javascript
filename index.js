@@ -1,11 +1,16 @@
-walk();
-// Function Declaration
-function walk() {
-    console.log("walk");
-}
+let x = 1;
+x = 'hi';
 
-// run();
-// Function Expression
-const run = function () {
-    console.log("run");
-};
+function sum(/* a, b */) {
+    let total = 0;
+    for (key in arguments) {
+        total += arguments[key];
+    }
+    return total;
+
+    // console.log(arguments);
+    // return a + b;
+}
+console.log(sum(1, 2));
+console.log(sum(1));
+console.log(sum(1, 2, 3, 4));
