@@ -1,25 +1,20 @@
-const numbers = [1, 2, 3, 4, 1, 1, 5];
+const movies = [
+    { title: "The Shawshank Redemption ", year: 1994, rating: 4.6 },
+    { title: "Pulp Fiction ", year: 1994, rating: 4.4 },
+    { title: "Forrest Gump", year: 1994, rating: 4.5 },
+    { title: "The Dark Knight", year: 2008, rating: 4.3 },
+    { title: "Spirited Away", year: 2001, rating: 4.5 },
+];
 
-function getMax(array) {
-    if (array.length === 0) {
-        return undefined;
-    }
+// all movies in 1994 with rating >= 4.5
+// sort by rating in decending order
+// pick their title to console
 
-    // let max = array[0];
-    // for (element of array) {
-    //     if (element > max) {
-    //         max = element;
-    //     }
-    // }
-    // return max;
-
-    return array.reduce((accumulator, current) => {
-        if (current > accumulator) {
-            return current;
-        }
-        return accumulator;
-    });
+function choseMovieByTitle(moviesArray) {
+    return moviesArray
+        .filter(movie => (movie.year === 1994 && movie.rating >= 4.5))
+        .sort((a, b) => (a.rating - b.rating))
+        .reverse()
+        .map(movie => movie.title);
 }
-
-const max = getMax(numbers);
-console.log(max);
+console.log(choseMovieByTitle(movies));
