@@ -1,25 +1,24 @@
-const color = 'red';
+// let x=0;
+// var y=1;
 
-function start() {
-    const message = 'hi';
+// var => function-scoped
+// ES6: let, const => block-scoped
+// function start() {
+//     for (/* let */var i = 0; i < 5; i++) {
+//         console.log(i);
+//         if (true) {
+//             /* var */let color = 'red';
+//         }
+//     }
+//     console.log(i);
+//     console.log(color);
+// }
+// start();
+// // console.log(i);
 
-    if (true) {
-        const another = 'bye';
-    }
-    // console.log(another);
+var myColor = 'red';
+let myAge = 30;
+console.log(window.myColor);
+console.log(window.myAge);
 
-    for (let i = 0; i < 5; i++) {
 
-    }
-    // console.log(i);
-
-    const myString = 'Apple';
-    // const color = 'blue';
-    console.log(color);
-}
-// console.log(message);
-
-function stop() {
-    const myString = "Orange";
-}
-start();
