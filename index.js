@@ -1,21 +1,6 @@
-function sum(...args) {
-    // console.log(args);
-
-    // let total = 0;
-    // for (e of args) {
-    //     total += e;
-    // }
-    // return total;
-
-    return args.reduce((a, c) => (a + c));
+function interest(principal, rate = 3.5, years = 5) {
+    return principal * rate / 100 * years;
 }
-console.log(sum(1, 2, 3, 4, 5));
-
-function realPrice(discount, ...prices) {
-    // console.log(discount);
-    // console.log(prices);
-
-    const total = prices.reduce((a, c) => (a + c));
-    return total * (1 - discount);
-}
-console.log(realPrice(0.1, 20, 30));
+console.log(interest(10000));
+console.log(interest(10000, undefined, 2));
+console.log(interest(10000, 2.5));
