@@ -1,6 +1,28 @@
-function interest(principal, rate = 3.5, years = 5) {
-    return principal * rate / 100 * years;
-}
-console.log(interest(10000));
-console.log(interest(10000, undefined, 2));
-console.log(interest(10000, 2.5));
+const person = {
+    firstName: "Albert",
+    lastName: "Einstein",
+
+    // fullName() {
+    //     return `${this.firstName} ${this.lastName}`;
+    // }
+
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    },
+    set fullName(value) {
+        const parts = value.split(' ');
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+    }
+};
+console.log(`${person.firstName} ${person.lastName}`);
+
+// console.log(person.fullName());
+
+// getters=>access properties
+// setters=>change (mutate) properties
+console.log(person.fullName);
+person.fullName = "Leonhard Euler";
+console.log(person.firstName);
+console.log(person.lastName);
+console.log(person.fullName);
