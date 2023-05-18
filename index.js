@@ -1,24 +1,23 @@
-// let x=0;
-// var y=1;
+// this: the object that is executing the current function
+// object have method -> object itself
+// regular function -> global object (window, global)
 
-// var => function-scoped
-// ES6: let, const => block-scoped
-// function start() {
-//     for (/* let */var i = 0; i < 5; i++) {
-//         console.log(i);
-//         if (true) {
-//             /* var */let color = 'red';
-//         }
+// const video = {
+//     title: 'a',
+//     play() {
+//         console.log(this);
 //     }
-//     console.log(i);
-//     console.log(color);
-// }
-// start();
-// // console.log(i);
+// };
+// video.play();
 
-var myColor = 'red';
-let myAge = 30;
-console.log(window.myColor);
-console.log(window.myAge);
+// video.stop = function () {
+//     console.log(this);
+// };
+// video.stop();
+
+function showThis() {
+    console.log(this);
+}
+showThis();
 
 
