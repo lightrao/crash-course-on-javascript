@@ -3,7 +3,7 @@
 // regular function -> global object (window, global)
 
 // const video = {
-//     title: 'a',
+//     title: 'How to make a cake',
 //     play() {
 //         console.log(this);
 //     }
@@ -15,9 +15,26 @@
 // };
 // video.stop();
 
-function showThis() {
-    console.log(this);
-}
-showThis();
+// function showThis() {
+//     console.log(this);
+// }
+// showThis();
+
+// function Video(title) {
+//     this.title = title;
+//     console.log(this);
+// }
+// const video2 = new Video('b')
+
+const movie = {
+    title: 'Your Name.',
+    tags: ['animation', 'drama', 'fantasy'],
+    showTags() {
+        this.tags.forEach(function (tag) {
+            console.log(this.title, tag);
+        }, this);
+    }
+};
+movie.showTags();
 
 
