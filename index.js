@@ -1,12 +1,14 @@
-// sum(1,2,3,4) -> 10
-// sum([1,2,3,4]) -> 10
+const circle = {
+  radius: 1,
+  get area() {
+    return Math.PI * this.radius * this.radius;
+  },
+  set area(a) {
+    this.radius = Math.sqrt(a / Math.PI);
+  },
+};
+circle.radius = 2;
+console.log(circle.area);
 
-function sum(...items) {
-  if (items.length === 1 && Array.isArray(items[0])) {
-    items = [...items[0]];
-  }
-
-  return items.reduce((a, c) => a + c);
-}
-console.log(sum(1, 2, 3, 4));
-console.log(sum([1, 2, 3, 4]));
+circle.area = 20;
+console.log(circle.radius);
